@@ -19,8 +19,13 @@ public class HiController {
     private SchedualServiceHi schedualServiceHi;
 
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
-    public String sayHi(@RequestParam String name) {
+    public String sayHi(@RequestParam(value = "name") String name) {
         return schedualServiceHi.sayHiFromClientOne(name);
+    }
+
+    @RequestMapping("/hello")
+    public String sayHello(@RequestParam(value = "name") String name){
+        return schedualServiceHi.sayHello(name);
     }
 
 }

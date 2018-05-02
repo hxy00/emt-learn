@@ -1,6 +1,7 @@
 server:
   port: 8761
 
+
 eureka:
   instance:
     hostname: localhost
@@ -9,3 +10,7 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
+
+spring:
+  application:
+    name: emt-server-eureka

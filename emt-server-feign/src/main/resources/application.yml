@@ -7,3 +7,10 @@ server:
 spring:
   application:
     name: emt-server-feign
+
+
+feign:
+  hystrix:
+    enable: true
+
+

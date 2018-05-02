@@ -21,4 +21,9 @@ public class HomeController {
         return "hi " + name + ",i am from port:" + port;
     }
 
+    @RequestMapping("/hello")
+    public String hello(@RequestParam String name){
+        return "hello " + name + ",i am from port:" + port;
+    }
+
 }

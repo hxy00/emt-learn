@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @FeignClient(value = "emt-server-hi", fallback = SchedualServiceHiHystric.class)
 public interface SchedualServiceHi {
+
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
     String sayHiFromClientOne(@RequestParam(value = "name") String name);
+
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    String sayHello(@RequestParam(value = "name") String name);
 }
